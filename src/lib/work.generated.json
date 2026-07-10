@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "airpods-audio",
+    "title": "AirPods Product Launch",
+    "category": "brand",
+    "tags": ["Product Ad", "Tech"],
+    "blurb": "A launch key-visual for wireless audio: spec callouts, glow staging, and a confident all-caps lockup.",
+    "src": "/work/airpods-audio.webp",
+    "width": 1024,
+    "height": 1024
+  },
+  {
+    "slug": "anua-skincare",
+    "title": "Anua Skincare Banner",
+    "category": "brand",
+    "tags": ["Brand", "Beauty"],
+    "blurb": "A botanical skincare banner with benefit pills, layered foliage, and a calm, trustworthy hierarchy.",
+    "src": "/work/anua-skincare.webp",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "slug": "pure-botanical-care",
+    "title": "Pure Botanical Care",
+    "category": "brand",
+    "tags": ["Brand", "Beauty"],
+    "blurb": "Clean split-layout product story with an icon system: nature-forward, editorial, and legible.",
+    "src": "/work/pure-botanical-care.webp",
+    "width": 1551,
+    "height": 1014
+  },
+  {
+    "slug": "amuse-handbag",
+    "title": "Amuse: Effortless Elegance",
+    "category": "brand",
+    "tags": ["Fashion", "Luxury"],
+    "blurb": "A fashion feature with restrained type and warm neutrals, where luxury is told through space and light.",
+    "src": "/work/amuse-handbag.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "slug": "unleash-the-power",
+    "title": "Unleash the Power",
+    "category": "brand",
+    "tags": ["Automotive", "Ad"],
+    "blurb": "A premium automotive ad with gold gradients, cityscape depth, and a decisive booking CTA.",
+    "src": "/work/unleash-the-power.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "slug": "classic-timeless",
+    "title": "Classic: Timeless",
+    "category": "editorial",
+    "tags": ["Poster", "Editorial"],
+    "blurb": "A kinetic poster with an outlined vertical wordmark riding over a duotone classic car.",
+    "src": "/work/classic-timeless.webp",
+    "width": 1023,
+    "height": 1537
+  },
+  {
+    "slug": "classic-remembered",
+    "title": "Built to Be Remembered",
+    "category": "editorial",
+    "tags": ["Poster", "Editorial"],
+    "blurb": "A framed, gallery-style automotive study: muted palette, film-frame crop, quiet confidence.",
+    "src": "/work/classic-remembered.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "slug": "blueberry-bliss",
+    "title": "Blueberry Bliss",
+    "category": "editorial",
+    "tags": ["Poster", "Food"],
+    "blurb": "An editorial dessert poster with organic cut-outs, a script-to-serif pairing, and indulgent colour.",
+    "src": "/work/blueberry-bliss.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "slug": "the-brand-story",
+    "title": "The Brand Story",
+    "category": "editorial",
+    "tags": ["Fashion", "Editorial"],
+    "blurb": "A soft-lit fashion editorial: marble, dried florals, and a serif that lets the product breathe.",
+    "src": "/work/the-brand-story.webp",
+    "width": 683,
+    "height": 954
+  },
+  {
+    "slug": "iced-coffee-latte",
+    "title": "Iced Coffee Latte",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A creamy beverage promo with brushed textures, warm tones, and a crisp price token.",
+    "src": "/work/iced-coffee-latte.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "slug": "red-velvet-cake",
+    "title": "Red Velvet Cake",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A dessert promo with sparkle detailing and a script-led headline: sweet, high-contrast, on-brand.",
+    "src": "/work/red-velvet-cake.webp",
+    "width": 1080,
+    "height": 1260
+  },
+  {
+    "slug": "delicious-chowmein",
+    "title": "A Bowl of Happiness",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A high-energy noodle promo with spark particles, bold framing, and an appetite-first composition.",
+    "src": "/work/delicious-chowmein.webp",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "slug": "special-shawarma",
+    "title": "Special Shawarma",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A punchy black-and-amber street-food promo pairing script with grotesque over a plated hero shot.",
+    "src": "/work/special-shawarma.webp",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "slug": "spicy-ramen",
+    "title": "Spicy Ramen",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A torn-paper ramen promo with layered textures, steam accents, and a playful discount hook.",
+    "src": "/work/spicy-ramen.webp",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "slug": "hot-and-spicy-wings",
+    "title": "Hot & Spicy Wings",
+    "category": "food",
+    "tags": ["F&B", "Social"],
+    "blurb": "A fiery wings promo with ember sparks, a calligraphic headline, and a bold order strip.",
+    "src": "/work/hot-and-spicy-wings.webp",
+    "width": 1020,
+    "height": 1280
+  }
+]

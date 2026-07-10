@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+/*
+  Namirah Tarannum — Graphics Designer
+  Design direction: "Warm gallery-noir." A restrained, editorial dark-luxury
+  frame that lets vivid, saturated design work read like pieces hung in a
+  gallery. Ivory type, espresso canvas, a single amber-gold accent, hairline
+  gold rules. Three-to-five colors, held with discipline.
+*/
+
+@theme {
+  /* Surfaces — warm near-blacks, not cold grey */
+  --color-ink: #100c0b;
+  --color-ink-2: #17110f;
+  --color-ink-3: #1e1613;
+  --color-surface: #221a16;
+
+  /* Ink / type */
+  --color-ivory: #f4eee6;
+  --color-muted: #b8ada0;
+  --color-faint: #9a8d7e;
+
+  /* Accent — a single amber gold, used with restraint */
+  --color-gold: #e2ab4d;
+  --color-gold-strong: #f0bd63;
+  --color-gold-deep: #b9863a;
+
+  /* Hairlines */
+  --color-line: rgba(244, 238, 230, 0.09);
+  --color-line-strong: rgba(244, 238, 230, 0.16);
+  --color-gold-line: rgba(226, 171, 77, 0.32);
+
+  --font-display: var(--font-display), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 1.35rem;
+
+  --shadow-lift: 0 1px 0 rgba(244, 238, 230, 0.04),
+    0 24px 60px -28px rgba(0, 0, 0, 0.85);
+  --shadow-frame: 0 40px 90px -40px rgba(0, 0, 0, 0.9),
+    0 2px 0 rgba(244, 238, 230, 0.05) inset;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Visible, on-brand focus ring — keyboard navigation is first-class */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* --- Small utilities ------------------------------------------------------ */
+
+/* Eyebrow / kicker label — tracked uppercase grotesque */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+}
+
+/* Fine film grain to keep the espresso field from banding */
+@utility bg-grain {
+  position: relative;
+  background-image: radial-gradient(
+      120% 90% at 82% 8%,
+      rgba(226, 171, 77, 0.05) 0%,
+      rgba(16, 12, 11, 0) 55%
+    ),
+    radial-gradient(
+      90% 80% at 12% 96%,
+      rgba(226, 171, 77, 0.035) 0%,
+      rgba(16, 12, 11, 0) 60%
+    );
+}
+
+/* Gold-to-ivory gradient text for the rare emphasis word */
+@utility text-gilded {
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-strong) 0%,
+    var(--color-gold) 40%,
+    var(--color-gold-deep) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* A hairline hover-underline that grows from the left */
+@utility link-underline {
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.4s var(--ease-out-soft);
+}
+
+/* Scroll reveal — hidden until observed, then eased into place */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 20px));
+  transition: opacity 0.8s var(--ease-out-soft), transform 0.8s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.input {
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1px solid var(--color-line-strong);
+  background-color: var(--color-ink-2);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-ivory);
+  transition: border-color 0.3s var(--ease-out-soft),
+    box-shadow 0.3s var(--ease-out-soft);
+}
+
+.input::placeholder {
+  color: var(--color-faint);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(226, 171, 77, 0.16);
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-x 38s linear infinite;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
