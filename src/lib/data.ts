@@ -11,13 +11,13 @@ export const profile = {
   email: "namirahnimu@gmail.com",
   phone: "+880 1638 202516",
   phoneHref: "+8801638202516",
-  yearsExperience: "5+",
+  yearsExperience: "6",
   since: 2020,
   // The hero punchline.
   punchline: "Design people can’t scroll past.",
   headline: ["Design that makes", "the scroll stop."],
   intro:
-    "I’m Namirah Tarannum, a graphics designer based in Chattogram. For five years I’ve turned brands, products, and menus into scroll-stopping visuals: social campaigns, posters, and product ads built to catch the eye and hold it.",
+    "I’m Namirah Tarannum, a graphics designer based in Chattogram. For six years I’ve turned brands and products into scroll-stopping visuals: social campaigns, posters, and product ads built to catch the eye and hold it.",
   statement:
     "I design at the intersection of appetite and attention. Whether it’s a plated hero shot, a beauty banner, or an automotive poster, my job is the same: make someone stop, look, and remember. Clean hierarchy, deliberate type, and colour that earns its place. Every layout is built to move people from a glance to an action.",
 } as const;
@@ -46,7 +46,7 @@ export const services = [
   {
     title: "Food & Beverage Marketing",
     description:
-      "Menu-to-feed promos that make food impossible to ignore. The niche where hierarchy, colour, and craving meet.",
+      "Feed-ready promos that make food impossible to ignore. The niche where hierarchy, colour, and craving meet.",
   },
   {
     title: "Packaging & Product Layouts",
@@ -97,7 +97,7 @@ export const experience = [
     orgShort: "Freelancer.com",
     period: "Oct 2020 – Present",
     description:
-      "Five years designing for international clients: social media creative, product ads, posters, and brand collateral across food, beauty, fashion, and retail.",
+      "Six years designing for international clients: social media creative, product ads, posters, and brand collateral across food, beauty, fashion, and retail.",
   },
 ] as const;
 
@@ -158,7 +158,7 @@ export const skills = [
 ] as const;
 
 export const stats = [
-  { value: "5+", label: "Years designing" },
+  { value: "6", label: "Years designing" },
   { value: "6", label: "Industries served" },
   { value: "15", label: "Selected works" },
   { value: "1", label: "Logo contest, won" },

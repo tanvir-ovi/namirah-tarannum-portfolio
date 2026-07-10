@@ -6,7 +6,8 @@ import { profile } from "@/lib/data";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+const FORMSPREE_ENDPOINT =
+  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/xrewnrkj";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -16,26 +17,9 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // No Formspree configured yet → fall back to the visitor's mail client so
-    // the form is never a dead end.
-    if (!FORMSPREE_ID) {
-      const name = String(data.get("name") ?? "");
-      const email = String(data.get("email") ?? "");
-      const project = String(data.get("project") ?? "");
-      const message = String(data.get("message") ?? "");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nProject: ${project}\n\n${message}`
-      );
-      window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-        `Project enquiry from ${name}`
-      )}&body=${body}`;
-      setStatus("success");
-      return;
-    }
-
     setStatus("submitting");
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json" },
         body: data,
@@ -69,7 +53,13 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+    <form
+      action={FORMSPREE_ENDPOINT}
+      method="POST"
+      onSubmit={handleSubmit}
+      className="space-y-6"
+      noValidate
+    >
       <div className="grid gap-6 sm:grid-cols-2">
         <Field label="Your name" htmlFor="name">
           <input

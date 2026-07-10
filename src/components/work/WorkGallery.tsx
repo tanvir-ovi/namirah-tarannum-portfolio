@@ -67,10 +67,10 @@ export function WorkGallery() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="columns-1 gap-6 sm:columns-2 lg:columns-3"
+              className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
             >
               {visible.map((item, i) => (
-                <WorkCard key={item.slug} item={item} priority={i < 3} />
+                <WorkCard key={item.slug} item={item} priority={i < 3} uniformFrame className="mb-0" />
               ))}
             </motion.div>
           </AnimatePresence>

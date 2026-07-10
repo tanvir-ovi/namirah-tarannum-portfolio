@@ -9,7 +9,7 @@ export const site = {
   role: "Graphics Designer",
   shortName: "Namirah Tarannum · Graphics Designer",
   description:
-    "Namirah Tarannum is a graphics designer in Chattogram, Bangladesh, crafting scroll-stopping social, brand, and product campaigns. Five years of design across food, beauty, fashion, and automotive.",
+    "Namirah Tarannum is a graphics designer in Chattogram, Bangladesh, crafting scroll-stopping social, brand, and product campaigns. Six years of design across food, beauty, fashion, and automotive.",
   url: SITE_URL,
   locale: "en_US",
 } as const;

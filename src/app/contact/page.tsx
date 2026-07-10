@@ -25,7 +25,7 @@ export default function ContactPage() {
             <span className="italic text-gilded">worth staring at.</span>
           </>
         }
-        intro="Have a brand, a product, or a menu that deserves better visuals? Tell me a little about it, and I reply to every serious enquiry within a day or two."
+        intro="Have a brand or product that deserves better visuals? Tell me a little about it, and I reply to every serious enquiry within a day or two."
       />
 
       <section className="py-16 sm:py-24">

@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Namirah Tarannum is a graphics designer in Chattogram, Bangladesh, with five years across social, brand, and product design. An Adobe Photoshop and Illustrator specialist, and an award-winning logo designer.",
+    "Namirah Tarannum is a graphics designer in Chattogram, Bangladesh, with six years across social, brand, and product design. An Adobe Photoshop and Illustrator specialist, and an award-winning logo designer.",
   alternates: { canonical: "/about" },
 };
 

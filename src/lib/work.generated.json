@@ -42,8 +42,8 @@
   {
     "slug": "unleash-the-power",
     "title": "Unleash the Power",
-    "category": "brand",
-    "tags": ["Automotive", "Ad"],
+    "category": "editorial",
+    "tags": ["Poster", "Automotive"],
     "blurb": "A premium automotive ad with gold gradients, cityscape depth, and a decisive booking CTA.",
     "src": "/work/unleash-the-power.webp",
     "width": 1024,
@@ -72,8 +72,8 @@
   {
     "slug": "blueberry-bliss",
     "title": "Blueberry Bliss",
-    "category": "editorial",
-    "tags": ["Poster", "Food"],
+    "category": "food",
+    "tags": ["F&B", "Dessert"],
     "blurb": "An editorial dessert poster with organic cut-outs, a script-to-serif pairing, and indulgent colour.",
     "src": "/work/blueberry-bliss.webp",
     "width": 1024,
@@ -82,8 +82,8 @@
   {
     "slug": "the-brand-story",
     "title": "The Brand Story",
-    "category": "editorial",
-    "tags": ["Fashion", "Editorial"],
+    "category": "brand",
+    "tags": ["Product", "Fashion"],
     "blurb": "A soft-lit fashion editorial: marble, dried florals, and a serif that lets the product breathe.",
     "src": "/work/the-brand-story.webp",
     "width": 683,

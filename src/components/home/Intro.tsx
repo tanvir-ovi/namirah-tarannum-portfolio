@@ -14,7 +14,7 @@ export function Intro() {
             <Reveal delay={0.05}>
               <p className="mt-6 text-balance font-display text-[1.7rem] leading-[1.28] text-ivory sm:text-[2.15rem] sm:leading-[1.26]">
                 For over{" "}
-                <span className="text-gilded">five years</span>, I’ve helped
+                <span className="text-gilded">six years</span>, I’ve helped
                 brands turn a glance into a decision, designing the visuals
                 people stop for, share, and remember.
               </p>

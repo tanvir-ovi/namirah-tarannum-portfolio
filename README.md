@@ -49,21 +49,24 @@ The monogram, favicon, and Open Graph card share one gilded "N" identity
 
 ## Contact form
 
-The contact form posts to [Formspree](https://formspree.io) when configured:
+The contact form posts to Formspree at `https://formspree.io/f/xrewnrkj` by
+default.
 
-1. Create a free form at formspree.io and copy its form ID.
-2. Copy `.env.local.example` to `.env.local`.
-3. Set `NEXT_PUBLIC_FORMSPREE_ID` to your form ID.
-4. Restart the dev server.
+To use a different Formspree form:
 
-Until then, submitting opens the visitor's email client with a pre-filled
-message, so the form is never a dead end.
+1. Copy `.env.local.example` to `.env.local`.
+2. Set `NEXT_PUBLIC_FORMSPREE_ENDPOINT` to the full Formspree endpoint.
+3. Restart the dev server.
+
+If a Formspree request fails, the form shows Namirah's direct email as the
+fallback contact path.
 
 ## Deployment (Vercel)
 
 1. Push this repository to GitHub.
 2. Import it at https://vercel.com/new — Next.js is detected automatically.
-3. (Optional) add `NEXT_PUBLIC_FORMSPREE_ID` under Environment Variables.
+3. (Optional) add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` under Environment Variables
+   only if you want to override the built-in Formspree endpoint.
 4. Deploy. Every push to `main` redeploys.
 
 After attaching a production domain, update `SITE_URL` in `src/lib/site.ts` so
