@@ -2,7 +2,7 @@
  * Single source of truth for site-wide identity, SEO, and the developer credit.
  * Update SITE_URL once the production domain is attached in Vercel.
  */
-export const SITE_URL = "https://namirah-tarannum.vercel.app";
+export const SITE_URL = "https://namirah-tarannum-portfolio.vercel.app";
 
 export const site = {
   name: "Namirah Tarannum",
