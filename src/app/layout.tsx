@@ -36,10 +36,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   verification: {
-    // TODO: paste the Google Search Console verification token here once
-    // Namirah (or whoever owns the Search Console property) generates one
-    // for this domain — see Settings → Ownership verification → HTML tag.
-    // google: "",
+    google: "orb3Iik4Z-XwqyhWibz5jqaSBXr3oVSSAdp1QUEdtNk",
   },
   openGraph: {
     type: "website",
