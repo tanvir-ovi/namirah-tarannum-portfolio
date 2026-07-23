@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   creator: site.name,
   keywords: [
     "Namirah Tarannum",
+    "Namirah",
+    "Namriah",
+    "Namriah Tarannum",
+    "Namirah Nimu",
+    "Nimu",
     "graphics designer",
     "social media design",
     "ad creative",
@@ -30,6 +35,12 @@ export const metadata: Metadata = {
     "Bangladesh",
   ],
   alternates: { canonical: "/" },
+  verification: {
+    // TODO: paste the Google Search Console verification token here once
+    // Namirah (or whoever owns the Search Console property) generates one
+    // for this domain — see Settings → Ownership verification → HTML tag.
+    // google: "",
+  },
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -50,25 +61,56 @@ export const metadata: Metadata = {
   },
 };
 
-const personJsonLd = {
+// Structured data (JSON-LD): a linked graph of Person + WebSite + ProfilePage
+// so search engines resolve "Namirah Tarannum" / "Namirah" / the common
+// misspelling "Namriah" / the nickname "Nimu" to this site.
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: site.name,
-  jobTitle: site.role,
-  url: SITE_URL,
-  email: "mailto:namirahnimu@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Chattogram",
-    addressCountry: "Bangladesh",
-  },
-  knowsAbout: [
-    "Graphic Design",
-    "Social Media Design",
-    "Advertising Creative",
-    "Poster Design",
-    "Brand Identity",
-    "Logo Design",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: site.name,
+      alternateName: ["Namirah", "Namriah", "Namriah Tarannum", "Namirah Nimu", "Nimu"],
+      givenName: "Namirah",
+      familyName: "Tarannum",
+      jobTitle: site.role,
+      url: SITE_URL,
+      image: `${SITE_URL}/logo.png`,
+      description: site.description,
+      email: "mailto:namirahnimu@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Chattogram",
+        addressCountry: "Bangladesh",
+      },
+      knowsAbout: [
+        "Graphic Design",
+        "Social Media Design",
+        "Advertising Creative",
+        "Poster Design",
+        "Brand Identity",
+        "Logo Design",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: site.name,
+      description: site.description,
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profilepage`,
+      url: SITE_URL,
+      name: `${site.name} · ${site.role}`,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#person` },
+      mainEntity: { "@id": `${SITE_URL}/#person` },
+    },
   ],
 };
 
@@ -80,7 +122,7 @@ export default function RootLayout({
       <body className="bg-grain min-h-dvh antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <SmoothScroll />
         <a
